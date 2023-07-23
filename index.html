@@ -97,7 +97,7 @@
     </marquee>
 
     <h2>did you know today is....<a id="weekday"></a>!!!!</h2>
-    <center><img id="weekdayimg"></center>
+    <center><a onclick="play()" ><img id="weekdayimg"></a></center>
     <p>that is my hero and inspiration... his name is JERMA!!!! he is not very smart but i stil like him!</p>
     <hr>
     <hr>
@@ -142,6 +142,11 @@
 
             document.getElementById('weekdayimg').src = 'jerma/' + day + '.gif' 
 
+        }
+
+        function play() {
+            var audio = new Audio('yipee.mp3');
+            audio.play();
         }
 
         const checkbox = document.getElementById('cantdoit')
