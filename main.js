@@ -4,9 +4,6 @@ var texts = ["Open Source", "Inventing", "Developing", "Being silly", "Making th
 function changeText() {
     var previousText = innovatetext.textContent;
     var finaltext = texts[Math.floor(Math.random() * texts.length)];
-    while (finaltext == previousText) {
-        const finaltext = texts[Math.floor(Math.random() * texts.length)];
-    }
     let i = 0;
     const intervalId = setInterval(() => {
         // If there is still text from the original text, remove it
@@ -36,7 +33,6 @@ const mouseMovement = (e) => {
     const coordBox = card.getBoundingClientRect();
     const centerPointX = coordBox.x + coordBox.width / 2;
     const centerPointY = coordBox.y + coordBox.height / 2;
-    const centerPoint = `${centerPointX} || ${centerPointY}`;
 
     const maxRotation = 10;
 
