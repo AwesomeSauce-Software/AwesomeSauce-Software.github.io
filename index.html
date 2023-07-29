@@ -1,170 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome!!!</title>
-    <style>
-        body {
-            background-color: lightyellow;
-            background-image: url('background.png');
-            background-repeat: repeat;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-        }
-
-        #name {
-            /* flashing red and green */
-            background-color: aliceblue;
-            animation: flash2 1s infinite;
-        }
-
-        h1, h2, h3, h4, a, p {
-            background-color: aliceblue;
-        }
-
-        @keyframes flash2 {
-            0% {
-                font-size: medium;
-                color: red;
-            }
-            50% {
-                font-size: xx-large;
-
-                color: green;
-            }
-            100% {
-                font-size: medium;
-
-                color: red;
-            }
-        }
-        /* one row only */
-        #catbox {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: nowrap;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #badgebox {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            flex-wrap: nowrap;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #catbox img {
-            width: 200px;
-            height: 200px;
-            margin: 10px;
-        }
-
-        #weekdayimg {
-            width: 10%;
-            height: 10%;
-        }
-    </style>
+    <title>Awesomesauce Software</title>
+    <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <audio src="./Nyancat.mp3" autoplay="true" controls="" preload="auto" autobuffer=""></audio>
-    <p>play this audio for optimal browsing experience!!</p>
-    <marquee><h1 id="name">AwesomeSauce!!!</h1></marquee>
-    <!-- <center><h1>HELLO!!</h1></center> -->
-    
-    <marquee>
-        <div id="catbox">
-            <h2>HERE COMES THE CAT TRAIN!!</h2>
-            <img src="train.png">
-            <img src="kittydance.gif">
-            <img src="murder.gif">
-            <img src="kittydance.gif">
-            <img src="kittydance.gif">
-            <img src="murder.gif">
-            <img src="watermelon.gif">
+    <div class="navbar">
+        <a class="underline" href="#page1">Home</a>
+        <a class="underline" href="mailto:cool@awesomesauce.software">Contact</a>
+    </div>
+    <div class="page dark video maintitle" id="page1">
+        <h1>Awesomesauce Software</h1>
+        <div class="textcontainer">
+            <h3 id="innovatetext">Creating</p>
+                <h3 id="cursor">_</h3>
         </div>
-    </marquee>
+        <div id="nextbutton">
+            <a class="underline" href="#page2"><img src="next.svg" alt="Next"></a>
+        </div>
+    </div>
 
-    <h2>did you know today is....<a id="weekday"></a>!!!!</h2>
-    <center><a onclick="play()" ><img id="weekdayimg"></a></center>
-    <p>that is my hero and inspiration... his name is JERMA!!!! he is not very smart but i stil like him!</p>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <hr>
-    <h4>hey if u want to email us... we are shy aha... but if u still want click the link!!!!! can u do it??</h4>
-    <marquee style="visibility: visible;" id="scrolll" scrollamount="100">
-        <a href="mailto:cool@awesomesauce.software">CLICK!!!!</a>
-    </marquee>
-    <a id="easy" style="visibility: hidden;" href="mailto:cool@awesomesauce.software">CLICK!!!!</a>
-    <div>
-        <input type="checkbox" id="cantdoit" name="cantdoit">
-        <label for="cantdoit">i cant do it :(</label>
-      </div>
+    <div class="page dark" id="page2">
+        <div class="cards">
+            <div class="card">
+                <h2>We 💓 Open Source</h2>
+                <p>We strongly believe that Open Source is a valuable asset to society and wish to fully embrace and 
+                    maintain it. Make sure to check out our <a class="underline" href="https://github.com/AwesomeSauce-Software">GitHub</a>.</p>
+            </div>
+            <div class="card">
+                <h2>Privacy First 🔒</h2>
+                <p>We run by the motto privacy first. We live in a day where privacy has become a rarity and one of our
+                    core principals is to protect your privacy. We will never sell your data to anyone, nor do we collect your data as per our <a class="underline" href="privacy.html">Privacy Policy</a>.</p>
+                </p>
+            </div>
+            <div class="card">
+                <h2>Small and nice Team! 😎</h2>
+                <p>Also, of course, AWESOME! We are a small Team based in Europe and we love building cool and awesome stuff. Feel free to <a class="underline" href="mailto:cool@awesomesauce.software">reach out to us</a> or <a class="underline" href="privacy.html">see who's in the team</a>.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footercontainer">
+        <div class="footer">
+            <p>© 2023 <a class="underline" href="https://github.com/AwesomeSauce-Software">Awesomesauce Software</a>, brought to you by <a class="underline" href="https://github.com/ptgms">ptgms</a>, <a class="underline" href="https://github.com/BitRapture">BitRapture</a> and <a class="underline" href="https://github.com/ModderOwls">ModderOwls</a>.</p>
+        </div>
+    </div>
 
-      <div id="badgebox">
-        <img src="badges/800x600.gif">
-        <img src="badges/aliens.gif">
-        <img src="badges/antibro6.gif">
-        <img src="badges/anythingbut.gif">
-        <img src="badges/anythingbut.gif">
-        <img src="badges/csbanner.gif">
-        <img src="badges/getfirefox.gif">
-        <img src="badges/hash_now.gif">
-        <img src="badges/hello_kitty.gif">
-        <img src="badges/internetexplerror.gif">
-        <img src="badges/NortonSafeWeb.png">
-        <img src="badges/notepad2.gif">
-        <img src="badges/nt2.gif">
-        <img src="badges/win10no.gif">
-      </div>
-    <script>
-        function updateWeekday() {
-            // get current weekday
-            const weekday = ["sunday","monday","tuesday","wednesday","thursday","friday","CATURDAY"];
-
-            const d = new Date();
-            let day = weekday[d.getDay()];
-
-            document.getElementById('weekday').innerText = day;
-
-            document.getElementById('weekdayimg').src = 'jerma/' + day + '.gif' 
-
-        }
-
-        function play() {
-            var audio = new Audio('yipee.mp3');
-            audio.play();
-        }
-
-        const checkbox = document.getElementById('cantdoit')
-
-checkbox.addEventListener('change', (event) => {
-  if (event.currentTarget.checked) {
-    alert('its ok we know its hard :)');
-    document.getElementById('scrolll').style.visibility = 'hidden';
-    document.getElementById('easy').style.visibility = 'visible';
-
-  } else {
-    alert('good job!!!');
-    document.getElementById('scrolll').style.visibility = 'visible';
-    document.getElementById('easy').style.visibility = 'hidden';
-  }
-})
-
-        updateWeekday();
-    </script>
+    <script src="main.js"></script>
 </body>
+
 </html>
