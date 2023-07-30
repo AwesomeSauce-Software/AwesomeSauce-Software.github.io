@@ -1,9 +1,17 @@
 innovatetext = document.getElementById("innovatetext");
-var texts = ["Open Source", "Inventing", "Developing", "Being silly", "Making things"];
+var texts = ["Being silly", "Inventing", "Developing", "Open Source", "Making things", "Being goofy", "Awesome!"];
 
 function changeText() {
     var previousText = innovatetext.textContent;
-    var finaltext = texts[Math.floor(Math.random() * texts.length)];
+    const pick = Math.floor(Math.random() * texts.length)
+    var finaltext = texts[pick];
+    if (pick == 0) {
+        document.getElementById("innovatetext").onclick = function () {
+            window.location.href = "legacy";
+        }
+    } else {
+        document.getElementById("innovatetext").onclick = function () {}
+    }
     let i = 0;
     const intervalId = setInterval(() => {
         // If there is still text from the original text, remove it
@@ -48,7 +56,6 @@ const mouseMovement = (e) => {
 
     // change background color gradient to white where mouse is
     const gradientX = Math.ceil((e.clientX - coordBox.x) / coordBox.width * 100);
-    const gradientY = Math.ceil((e.clientY - coordBox.y) / coordBox.height * 100);
     card.style.background = `linear-gradient(${gradientX}deg, #1e1e1ea5 0%, #282828a5 100%)`;
 }
 
@@ -67,3 +74,14 @@ cards.forEach(card => {
 });
 
 setInterval(changeText, 10000);
+
+// when scrolling down, make .darken less opaque
+window.addEventListener('scroll', function () {
+    var value = window.scrollY;
+    const scrollPercent = (value / (document.body.scrollHeight - window.innerHeight)) * 100;
+    var scrollAmount = scrollPercent / 100 + 0.5;
+    if (scrollAmount > 1.0) {
+        scrollAmount = 1.0;
+    }
+    document.querySelector('.darken').style.opacity = scrollAmount;
+})
