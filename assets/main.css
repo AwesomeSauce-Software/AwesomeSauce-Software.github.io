@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Open Sans'; 
+    src: url('opensans.ttf') format('truetype'); 
+    /* Update the URL based on your file path */
+}
+
 body {
     background-color: #000;
     color: #fff;
@@ -86,7 +92,7 @@ background-size: 400% 400%;
 }
 
 .video {
-    background-image: url('background.webp');
+    background-image: url('/assets/background.webp');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
